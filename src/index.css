@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.audience-menu ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  background: black;
+  margin: 2px;
+  width: 70px;
+  color: white;
+  transition: 0.5s;
+}
+
+.audience-menu ul li:hover {
+  background: rgb(146, 0, 0);
+  cursor: pointer;
+}
