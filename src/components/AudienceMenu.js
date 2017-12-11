@@ -1,5 +1,4 @@
 import React from 'react'
-import AudienceHover from './AudienceHover'
 
 const AudienceMenu = ({
   title,
@@ -13,7 +12,7 @@ const AudienceMenu = ({
             return (
               <li
                 key={ audient.name }
-                onMouseOver={ ()=>{ AudienceHover({audient}) } }
+                onMouseOver={ ()=>{ onAudienceHover(audient) } }
               >
                 { audient.name }
               </li>

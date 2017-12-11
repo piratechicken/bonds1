@@ -3,11 +3,12 @@ import bra from './bra.jpg';
 import './App.css'
 
 import AudienceMenu from './components/AudienceMenu'
-import CategoryMenu from './components/CategoryMenu'
+import AudienceHover from './components/AudienceHover'
 
 class App extends Component {
   state = {
     audience: require('./data').audience,
+    activeAudience: null,
     activeSubcategory: null,
     styles: require('./data').styles,
     activeStyle: 1,
@@ -16,8 +17,16 @@ class App extends Component {
     sizes: require('./data').sizes
   }
 
+onAudienceHover = (audient) => {
+  console.log(audient)
+  this.setState(() => {
+    return({
+      activeAudience: audient})
+  })
+}
+
   render() {
-    const { audience } = this.state
+    const { audience, activeAudience } = this.state
 
     return (
       <div className="App">
@@ -28,7 +37,14 @@ class App extends Component {
         <AudienceMenu 
           title="Hello" 
           audience={ audience }
+          onAudienceHover ={ this.onAudienceHover }
         />
+        {
+          !!activeAudience &&
+          <AudienceHover 
+            audient={ activeAudience }
+          />
+        }
         
       </div>
     );

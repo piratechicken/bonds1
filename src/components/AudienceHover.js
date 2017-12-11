@@ -2,13 +2,21 @@ import React from 'react'
 import CategoryMenu from './CategoryMenu'
 
 const AudienceHover = ({audient}) => {
+  console.log(audient.name)
+  console.log(audient.category)
   return (
-    { audient.[].map((category) => {
+  <div>
+    <h1>This is working</h1>
+    { audient.category.map((category) => {
         return (
-          <CategoryMenu category={ category } />
+          <CategoryMenu 
+            key={ category.name }  
+            category={ category } 
+          />
         )
       })
     }
+  </div>
   )
 }
 
