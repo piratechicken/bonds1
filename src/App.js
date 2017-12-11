@@ -3,7 +3,6 @@ import bra from './bra.jpg';
 import './App.css'
 
 import AudienceMenu from './components/AudienceMenu'
-import CategoryMenu from './components/CategoryMenu'
 
 class App extends Component {
   state = {
@@ -25,11 +24,11 @@ class App extends Component {
           <img src={bra} className="App-logo" alt="logo" />
           <h1 className="App-title">Bonds</h1>
         </header>
-        <AudienceMenu 
-          title="Hello" 
+        <AudienceMenu
+          title="Hello"
           audience={ audience }
         />
-        
+
       </div>
     );
   }

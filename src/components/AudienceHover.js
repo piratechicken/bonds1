@@ -3,12 +3,15 @@ import CategoryMenu from './CategoryMenu'
 
 const AudienceHover = ({audient}) => {
   return (
-    { audient.[].map((category) => {
+    <div>
+    { audient.category.map((category) => {
         return (
+            key = { category.name }
           <CategoryMenu category={ category } />
         )
       })
     }
+    </div>
   )
 }
 
