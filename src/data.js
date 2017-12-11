@@ -1,6 +1,6 @@
 const audience = [
   { 
-    name: "men",
+    name: "Men",
     category: [
       {
         name: "underwear",
@@ -21,7 +21,7 @@ const audience = [
     ]
   },
   { 
-    name: "women",
+    name: "Women",
     category: [
       {
         name: "underwear",
@@ -40,10 +40,25 @@ const audience = [
         subCategories: ["casual", "business", "sport"]
       }
     ]
+  },
+  { 
+    name: "Kids",
+    category: [
+      {
+        name: "girl's clothing",
+        subCategories: ["tees", "hoodies", "leggings"]
+      },
+      {
+        name: "boy's clothing",
+        subCategories: ["tees", "trackies", "shorts"]
+      },
+      {
+        name: "socks and accessories",
+        subCategories: ["socks", "leggings", "accessories"]
+      }
+    ]
   }
 ]
-
-
 
 
 const styles = [

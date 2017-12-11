@@ -4,6 +4,42 @@ body {
   font-family: sans-serif;
 }
 
+.hover-menu {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: rgb(17, 17, 17);
+  padding: 20px;
+}
+
+.category-menu {
+  text-align: left;
+  border-left: rgb(146, 146, 146) solid 1px;
+  padding: 10px;
+  width: 150px;
+}
+
+.category-menu h3 {
+  border-bottom: rgb(146, 146, 146) solid 1px;
+  padding-top: 0;
+  margin-top: 0;
+  color: rgb(146, 146, 146);
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.category-menu ul {
+  padding: 0;
+}
+.category-menu ul li {
+  list-style: none;
+  color: white;
+  line-height: 200%;
+  font-size: 0.8em;
+  font-weight: lighter;
+}
 
 .audience-menu ul li {
   list-style: none;

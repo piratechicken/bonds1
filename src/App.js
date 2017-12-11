@@ -20,8 +20,13 @@ class App extends Component {
 onAudienceHover = (audient) => {
   console.log(audient)
   this.setState(() => {
-    return({
-      activeAudience: audient})
+    return({ activeAudience: audient })
+  })
+}
+
+onAudienceMouseOut = () => {
+  this.setState(() => {
+    return({ activeAudience: null })
   })
 }
 
@@ -38,6 +43,7 @@ onAudienceHover = (audient) => {
           title="Hello" 
           audience={ audience }
           onAudienceHover ={ this.onAudienceHover }
+          onAudienceMouseOut={ this.onAudienceMouseOut }
         />
         {
           !!activeAudience &&

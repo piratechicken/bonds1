@@ -5,8 +5,7 @@ const AudienceHover = ({audient}) => {
   console.log(audient.name)
   console.log(audient.category)
   return (
-  <div>
-    <h1>This is working</h1>
+  <div className="hover-menu">
     { audient.category.map((category) => {
         return (
           <CategoryMenu 
