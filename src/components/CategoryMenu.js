@@ -10,7 +10,7 @@ const CategoryMenu = ({category}) => {
         { category.subCategories.map((subCat) => {
           return (
             <li key={subCat}>
-              <Link to={`category/${ subCat }`}>{ subCat.toUpperCase() }</Link>
+              <Link to={`./category/${ subCat }`}>{ subCat.toUpperCase() }</Link>
               {/* { subCat.toUpperCase() } */}
             </li>
           )

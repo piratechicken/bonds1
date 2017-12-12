@@ -47,11 +47,7 @@ onAudienceMouseOut = () => {
           title="Hello"
           audience={ audience }
           onAudienceHover ={ this.onAudienceHover }
-<<<<<<< HEAD
-
-=======
           // onAudienceMouseOut={ this.onAudienceMouseOut }
->>>>>>> links
         />
         {
           !!activeAudience &&
