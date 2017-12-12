@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Fragment}  from 'react'
+import  { Link } from 'react-router-dom'
 
 const CategoryMenu = ({category}) => {
   console.log(category.name)
@@ -9,7 +10,8 @@ const CategoryMenu = ({category}) => {
         { category.subCategories.map((subCat) => {
           return (
             <li key={subCat}>
-              { subCat.toUpperCase() }
+              <Link to={`category/${ subCat }`}>{ subCat.toUpperCase() }</Link>
+              {/* { subCat.toUpperCase() } */}
             </li>
           )
         })}
