@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import bra from './bra.jpg';
 import './App.css'
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import AudienceMenu from './components/AudienceMenu'
 import AudienceHover from './components/AudienceHover'
@@ -35,6 +36,8 @@ onAudienceMouseOut = () => {
     const { audience, activeAudience, activeSubcategory, styles } = this.state
 
     return (
+      <Router>
+
       <div className="App">
         <header className="App-header">
           <img src={bra} className="App-logo" alt="logo" />
@@ -44,7 +47,11 @@ onAudienceMouseOut = () => {
           title="Hello"
           audience={ audience }
           onAudienceHover ={ this.onAudienceHover }
+<<<<<<< HEAD
 
+=======
+          // onAudienceMouseOut={ this.onAudienceMouseOut }
+>>>>>>> links
         />
         {
           !!activeAudience &&
@@ -57,6 +64,9 @@ onAudienceMouseOut = () => {
         {  console.log(styles) }
           <StylePage styles={ styles } />
       </div>
+      </Router>
+
+      
     );
   }
 }
