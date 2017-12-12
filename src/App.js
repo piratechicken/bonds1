@@ -4,6 +4,7 @@ import './App.css'
 
 import AudienceMenu from './components/AudienceMenu'
 import AudienceHover from './components/AudienceHover'
+import StyleCard from './components/StyleCard'
 
 class App extends Component {
   state = {
@@ -25,9 +26,9 @@ onAudienceHover = (audient) => {
 }
 
 onAudienceMouseOut = () => {
-  this.setState(() => {
-    return({ activeAudience: null })
-  })
+  // this.setState(() => {
+  //   return({ activeAudience: null })
+  // })
 }
 
   render() {
@@ -51,7 +52,9 @@ onAudienceMouseOut = () => {
             audient={ activeAudience }
           />
         }
-        
+        <StyleCard />
+        <StyleCard />
+        <StyleCard />
       </div>
     );
   }
