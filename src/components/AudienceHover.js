@@ -3,10 +3,10 @@ import CategoryMenu from './CategoryMenu'
 
 const AudienceHover = ({
    audient,
-   onAudienceMouseOut
+   onAudienceMouseOut,
+   onSelectSubcategory
 }) => {
-  console.log(audient.name)
-  console.log(audient.category)
+
   return (
   <div className="hover-menu"
        onMouseOut={ onAudienceMouseOut }
@@ -16,6 +16,7 @@ const AudienceHover = ({
           <CategoryMenu
             key={ category.name }
             category={ category }
+            onSelectSubcategory={ onSelectSubcategory }
           />
         )
       })

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import bra from './bra.jpg';
 import './App.css'
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Link } from "react-router-dom";
 
 import AudienceMenu from './components/AudienceMenu'
 import AudienceHover from './components/AudienceHover'
@@ -20,9 +20,14 @@ class App extends Component {
   }
 
 onAudienceHover = (audient) => {
-  console.log(audient)
   this.setState(() => {
     return({ activeAudience: audient })
+  })
+}
+
+onSelectSubcategory = (subcategory) => {
+  this.setState(() => {
+    return({activeSubcategory: subcategory})
   })
 }
 
@@ -41,7 +46,7 @@ onAudienceMouseOut = () => {
       <div className="App">
         <header className="App-header">
           <img src={bra} className="App-logo" alt="logo" />
-          <h1 className="App-title">Bonds</h1>
+          <Link to='/'><h1 className="App-title">Bonds</h1></Link>
         </header>
         <AudienceMenu
           title="Hello"
@@ -55,11 +60,18 @@ onAudienceMouseOut = () => {
             audient={ activeAudience }
             onAudienceMouseOut={ this.onAudienceMouseOut }
             onClick
+            onSelectSubcategory={ this.onSelectSubcategory }
           />
         }
-        {  console.log(styles) }
+
+        {/* <StylePage styles={ styles } /> */}
+
+        <Route path={`/category/${activeSubcategory}`} exact render={ () => (
           <StylePage styles={ styles } />
+        )}
+        />
       </div>
+
       </Router>
 
       
