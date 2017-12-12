@@ -5,7 +5,6 @@ import './App.css'
 import AudienceMenu from './components/AudienceMenu'
 import AudienceHover from './components/AudienceHover'
 import StylePage from './components/StylePage'
-import StyleCard from './components/StyleCard'
 
 class App extends Component {
   state = {
@@ -55,13 +54,8 @@ onAudienceMouseOut = () => {
             onClick
           />
         }
-        { !!activeSubcategory &&
+        {  console.log(styles) }
           <StylePage styles={ styles } />
-        }
-
-        <StyleCard />
-        <StyleCard />
-        <StyleCard />
       </div>
     );
   }

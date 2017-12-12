@@ -76,7 +76,22 @@ const styles = [
     id: 3,
     name: "crew",
     price: 20
-  }
+  },
+  {
+    id: 4,
+    name: "daggy",
+    price: 20
+  },
+  {
+    id: 5,
+    name: "nerd shirt",
+    price: 20
+  },
+  {
+    id: 6,
+    name: "polo",
+    price: 20
+  },
 ]
 
 const colors = [

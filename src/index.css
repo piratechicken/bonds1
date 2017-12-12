@@ -58,6 +58,14 @@ body {
   cursor: pointer;
 }
 
+.style-page {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 700px;
+  margin: auto;
+}
+
 .style-card {
   border: black solid 1px;
   border-radius: 2px;

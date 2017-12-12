@@ -1,11 +1,14 @@
 import React from 'react'
+import StyleCard from './StyleCard'
 
 function StylePage({ styles }) {
   return (
     <div className='style-page'>
       {
         styles.map((style) => {
-          <StyleCard style={ style }/>
+          return (
+            <StyleCard style={ style }/>
+          )
         })
       }
     </div>
