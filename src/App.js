@@ -4,6 +4,8 @@ import './App.css'
 
 import AudienceMenu from './components/AudienceMenu'
 import AudienceHover from './components/AudienceHover'
+import StylePage from './components/StylePage'
+import StyleCard from './components/StyleCard'
 
 class App extends Component {
   state = {
@@ -26,12 +28,12 @@ onAudienceHover = (audient) => {
 
 onAudienceMouseOut = () => {
   this.setState(() => {
-    return({ activeAudience: null })
+  //  return({ activeAudience: null })
   })
 }
 
   render() {
-    const { audience, activeAudience } = this.state
+    const { audience, activeAudience, activeSubcategory, styles } = this.state
 
     return (
       <div className="App">
@@ -39,19 +41,24 @@ onAudienceMouseOut = () => {
           <img src={bra} className="App-logo" alt="logo" />
           <h1 className="App-title">Bonds</h1>
         </header>
-        <AudienceMenu 
-          title="Hello" 
+        <AudienceMenu
+          title="Hello"
           audience={ audience }
           onAudienceHover ={ this.onAudienceHover }
-          onAudienceMouseOut={ this.onAudienceMouseOut }
+
         />
         {
           !!activeAudience &&
-          <AudienceHover 
+          <AudienceHover
             audient={ activeAudience }
+            onAudienceMouseOut={ this.onAudienceMouseOut }
+            onClick
           />
         }
-        
+        { !!activeSubcategory &&
+          <StylePage styles={ styles } />
+        }
+
       </div>
     );
   }
