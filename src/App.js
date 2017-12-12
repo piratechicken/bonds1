@@ -27,9 +27,9 @@ onAudienceHover = (audient) => {
 }
 
 onAudienceMouseOut = () => {
-  this.setState(() => {
-  //  return({ activeAudience: null })
-  })
+  // this.setState(() => {
+  //   return({ activeAudience: null })
+  // })
 }
 
   render() {
@@ -59,6 +59,9 @@ onAudienceMouseOut = () => {
           <StylePage styles={ styles } />
         }
 
+        <StyleCard />
+        <StyleCard />
+        <StyleCard />
       </div>
     );
   }
