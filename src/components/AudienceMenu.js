@@ -3,8 +3,7 @@ import React from 'react'
 const AudienceMenu = ({
   title,
   audience,
-  onAudienceHover,
-  onAudienceMouseOut
+  onAudienceHover
 }) => {
   return (
       <div className="audience-menu">
@@ -14,7 +13,6 @@ const AudienceMenu = ({
               <li
                 key={ audient.name }
                 onMouseOver={ ()=>{ onAudienceHover(audient) } }
-                onMouseOut={ onAudienceMouseOut }
               >
                 { audient.name }
               </li>
